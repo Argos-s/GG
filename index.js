@@ -30,8 +30,12 @@ bot.start((ctx) => {
     ctx.reply('Университет Тон - 20 000$/год', hopp.draw())
 })
 
-.on('callback_query', (ctx) => {
-    ctx.answerCbQuery(ctx.callbackQuery.data)
+bot.on('text', async (ctx) => {
+try {
+    ctx.reply(formatData)
+} catch(e) {
+    ctx.reply('Проверь написание страны')
+}
 })
 
 bot.startPolling()
