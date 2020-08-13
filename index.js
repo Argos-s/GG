@@ -30,7 +30,7 @@ bot.start((ctx) => {
     ctx.reply('Университет Тон - 20 000$/год', hopp.draw())
 })
 
-bot.on('text', async (ctx) => {
+.on('text', async (ctx) => {
 try {
     ctx.reply(formatData)
 } catch(e) {
